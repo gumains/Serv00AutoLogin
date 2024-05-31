@@ -1,0 +1,16 @@
+# name属性用来指定这个工作流的名字
+name: Serv00 Login
+
+# 这个部分用来指定能够触发工作流执行的事件
+on:
+  workflow_dispatch: # 手动触发工作流
+
+  schedule:
+    - cron: '5 2 */7 * *' # 定时触发工作流，具体时间为每隔7天的02:05
+
+env: # 用于定义环境变量
+  # 在这里可以定义环境变量，方便在整个工作流中使用
+  # 例如：
+  # EXAMPLE_VAR: "example_value"
+
+
